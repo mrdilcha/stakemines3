@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>DICE</title>
+    <style>
+        /* New CSS properties to prevent content overflow */
+        .bottom-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            max-width: 400px; /* Set a maximum width */
+            overflow: hidden; /* Hide any overflowing content */
+            border-radius: 8px;
+        }
+
+        .inner-div1 {
+            flex: 0 0 auto; /* Prevent the inner div from growing */
+            margin-right: 10px;
+        }
+
+        .inner-div2 {
+            flex: 1; /* Allow the inner div to grow */
+            margin-top: 14%;
+        }
+
+        .inner-div2 h3 {
+            margin: 0;
+        }
+
+        .inner-div2 p {
+            margin: 5px 0;
+            font-size: x-small;
+            font-weight: 100;
+        }
+
+        .c{
+    position: absolute;
+  
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #00FF00; /* Green color */
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 6%;
+    margin-bottom: 6%;
+    text-decoration: none;
+    color: black;
+}
+        .div2 {
+            font-size: small;
+        }
+       
+        /* Define the grid container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 50px); /* 5 columns, each 50px wide */
+            grid-template-rows: repeat(5, 50px); /* 5 rows, each 50px tall */
+            gap: 5px; /* Space between grid cells */
+            background-color: white; /* Background of the grid container */
+            padding: 10px; /* Padding for better visualization */
+        }
+
+        /* Style for each cell in the grid */
+        .grid-item {
+            background-color: #1a2227;
+            box-shadow: 0 4px 8px #1a2227; /* Green shadow */
+            border-radius: 4px;
+            /* border-bottom: 1px solid #32414b;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px; */
+        }
+
+        /* Style for image background */
+        .image-background {
+            background-image: url('./gem.png');
+            background-size: cover;
+            background-position: center;
+        }
+        html,body{
+        height: 150vh;
+     }
+     .editable-placeholder {
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            min-height: 20px; /* Minimum height for the placeholder */
+            overflow: auto; /* Enable scrolling if content overflows */
+            box-shadow: 0 4px 8px #1a2227; /* Green shadow */
+        }
+    </style>
+    
+     
+</head>
+<body>
+    <div class="navbar">
+        <a class="navbar-brand" href="#">STAKE_JALWA</a>
+    </div>
+  
+    <div class="bottom-div">
+        <div class="inner-div1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTmoqtmhs4Tenh5hdiQkAuFKCrGkL9tbj26g&s" alt="">
+        </div>
+        <div class="inner-div2">
+          <h3> 
+          STAKE</h3>
+          <p class="div2">TUTORIAL TO PLAY GAME</p>
+          <a href="https://www.instagram.com/stake_jalwa?igsh=MTdsNGFoOGIxaTkwNg=="  class="c" >Watch</a>
+         
+        </div>
+    
+    </div>  
+    <div class="editable-placeholder" contenteditable="true">
+   
+    </div>
+          <div class="game">
+            <div class="grid-container">
+                <!-- 5x5 grid with black cells -->
+                <!-- Row 1 -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+                <!-- Row 2 -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+                <!-- Row 3 -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+                <!-- Row 4 -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                
+                <!-- Row 5 -->
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+            </div>
+          </div>
+      
+          <button class="ca" id ="startButton" onclick="changeToImage();startGame()">START</button>    
+          
+          
+          <div class="note" > <h4>PLAY 3 MINES LEVEL WISE</h4>
+            <h4>PLAY WITH ATLEAST 1000RS</h4>
+            <h4>DONT USE OLD ACCOUNT</h4>
+            <h4>ONLY WORK IN NEW ACCOUNT</h4>
+        </div>
+          
+        <script>
+                    function disable() {
+    var x = document.getElementById("startBtn");
+   
+  
+    x.style.display = "none";
+    setTimeout(function() {
+        x.style.display = "block";
+        y.innerHTML="";
+    }, 15000); 
+  }
+            function startGame() {
+                var startButton = document.getElementById('startButton');
+                startButton.disabled = true; // Disable the button when clicked
+    
+                setTimeout(function() {
+                    startButton.disabled = false; // Enable the button after 5 seconds
+                }, 15000);
+            }
+    
+            function changeToImage() {
+                var gridItems = document.querySelectorAll('.grid-item');
+    
+                // Generate random indices
+                var randomIndices = [];
+                while (randomIndices.length < 5) {
+                    var randomIndex = Math.floor(Math.random() * 25);
+                    if (!randomIndices.includes(randomIndex)) {
+                        randomIndices.push(randomIndex);
+                    }
+                }
+    
+                // Change background to image for randomly selected items
+                randomIndices.forEach(function(index) {
+                    gridItems[index].classList.add('image-background');
+                });
+    
+                // Revert back to black after 5 seconds
+                setTimeout(function() {
+                    randomIndices.forEach(function(index) {
+                        gridItems[index].classList.remove('image-background');
+                    });
+                }, 15000);
+            }
+    
+          
+    
+                // Dismiss the popup and update local storage
+               
+        </script>
+    </body>
+    <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'sg2plzcpnl504432'},{'dcenter':'sg2'},{'cp_id':'9806360'},{'cp_cache':''},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
