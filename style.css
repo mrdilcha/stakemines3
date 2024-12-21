@@ -1,0 +1,269 @@
+/* CSS for navbar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
+    height:200vh;
+}
+.navbar {
+    background-color: #00FF00; /* Green color *//* Black with some transparency for blur effect */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    margin-top: auto;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Green shadow */
+   
+
+}
+.navbar-brand {
+    float: left;
+    /* display: block; */
+    position: sticky;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* CSS for carousel */
+.carousel-container {
+    position: relative;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 400px; /* Maximum width */
+     margin-top: 8%;
+     margin-left: 10%;
+    height: 200px; /* Adjust the height as needed */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Green shadow */
+    border-radius: 3%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex; /* Assuming slides are arranged horizontally */
+    width: auto; /* Three slides */
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide img {
+    width: 100%; 
+    height: 200px; 
+    background-size: cover;
+    background-position: center;
+    
+   
+}
+
+.carousel-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #00FF00; /* Green color */
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+/* CSS for bottom div */
+.bottom-div {
+    width: 80%;
+    height: 100px; /* Adjust height as needed */
+    margin: 30px auto; /* Center the div horizontally */
+    /* background-color: rgba(0, 0, 0, 0.5); Black with some transparency for blur effect */
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Green shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3%;
+}
+
+/* CSS for inner divs */
+.inner-div1
+ {
+    width: 45%; /* Each inner div takes up 45% of the bottom div's width */
+    height: 80%; /* Adjust height as needed */
+ 
+  
+}
+
+.inner-div2 {
+    width: 65%; /* Each inner div takes up 45% of the bottom div's width */
+    height: 100%; /* Adjust height as needed */
+   
+  padding-left: 25%;
+  padding-bottom: 10%;
+   
+}
+.inner-div1,img{
+    height: 100px;
+    width: 120px;
+    
+}
+.inner-div1,img{
+    height: 100px;
+    width: 120px;
+    
+}
+.inner-div1,img{
+    height: 100px;
+    width: 120px;
+    
+}
+/* Adjust the styles as needed */
+.c{
+    position: absolute;
+  
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #00FF00; /* Green color */
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 6%;
+    margin-bottom: 6%;
+}
+/* CSS for the popup */
+/* CSS for the popup *
+
+/* Adjust styles as needed */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   width: 80%;
+
+   height: 75%;
+     /* padding: -5px;  */
+    /* border: 1px solid black; */
+    z-index: 1000; /* Ensure the popup is on top of other elements */
+    /* margin-top: 30%; */
+}
+.warning{
+    color: yellow;
+    
+}
+.popup-content {
+    background-color: black;
+    padding: 45px;
+    margin-bottom: 15%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.register{
+    background-color: red;
+    background: none;
+    border: none;
+    outline: none;
+}
+.war{
+    
+    height: 80px;
+    width: 80px;
+}
+.mee{
+  color: white;
+  margin-bottom: 2%;
+  font-size: small;
+}
+#register-link{
+
+    position: absolute;
+  
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: yellow; /* Green color */
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    /* margin-left: 6%;
+   */
+      margin-bottom: 6%; */
+    text-decoration: none;
+    color: black;
+
+}
+ /* Define the grid container */
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 50px); /* 5 columns, each 50px wide */
+    grid-template-rows: repeat(5, 50px); /* 5 rows, each 50px tall */
+    gap: 5px; /* Space between grid cells */
+    background-color: white; /* Background of the grid container */
+    padding: 10px; /* Padding for better visualization */
+   
+}
+
+/* Style for each cell in the grid */
+.grid-item {
+    background-color: #1a2227;
+   
+}
+
+/* Style for image background */
+.image-background {
+    background-image: url('./gem.png');
+    background-size: cover;
+}
+.game{
+    margin-left: 11%;
+    margin-top: 4%;
+  
+}
+.ca{
+    position: absolute;
+  
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #00FF00; /* Green color */
+    /* color: white; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 50%;
+    margin-top: 6%;
+}
+.note{
+  
+  width: 80%;
+  height: 15%;
+  margin-left: 7%;
+  margin-top: 27%;
+  box-shadow: 0 4px 8px #1a2227; /* Green shadow */
+  padding: 3%;
+  border-radius: 4%;
+}
+#overlay {
+    position: fixed;
+    top: 10;
+    left: 10;
+    width: 100%;
+    height: 130%;
+    display: block;
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent black color */
+    z-index: 999; /* Ensure the overlay is above other elements */
+    display: none; /* Initially hidden */
+    display: block;
+    margin-bottom: 20vh;
+}
